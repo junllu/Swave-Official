@@ -1,0 +1,17 @@
+<h1>Listing Barbers</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Personal Bio</th>
+  </tr>
+
+  <% @barbers.each do |barber| %>
+    <tr>
+      <td><%= barber.username %></td>
+      <td><%= barber.name %></td>
+      <td><%= barber.personal_bio %></td>
+    </tr>
+  <% end %>
+</table>
