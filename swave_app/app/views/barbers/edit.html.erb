@@ -1,0 +1,38 @@
+<h1>Editing Barber</h1>
+<%= form_for :barber, url: barber_path(@barber), method: :patch do |f| %>
+  <% if @barber.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@barber.errors.count, "error") %> prohibited this barber
+        from being saved:
+      </h2>
+      <ul>
+        <% @barber.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <%= f.label :name%><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :personal_bio%><br>
+    <%= f.text_area :personal_bio %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', barbers_path %>

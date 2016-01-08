@@ -8,12 +8,31 @@ class BarbersController < ApplicationController
   end
 
   def new
+    @barber = Barber.new
+  end
+
+  def edit
+    @barber = Barber.find(params[:id])
   end
 
   def create
     @barber = Barber.new(barber_params)
-    @barber.save
-    redirect_to @barber
+
+    if @barber.save
+      redirect_to @barber
+    else
+      render 'new'
+    end
+  end
+
+  def update
+    @barber = Barber.find(params[:id])
+
+    if @barber.update(barber_params)
+      redirect_to @barber
+    else
+      render 'edit'
+    end
   end
 
   private

@@ -12,6 +12,8 @@
       <td><%= barber.username %></td>
       <td><%= barber.name %></td>
       <td><%= barber.personal_bio %></td>
+      <td><%= link_to 'Show', barber_path(barber) %></td>
+      <td><%= link_to 'Edit', edit_barber_path(barber) %></td>
     </tr>
   <% end %>
 </table>
