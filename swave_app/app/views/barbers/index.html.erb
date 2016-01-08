@@ -14,6 +14,9 @@
       <td><%= barber.personal_bio %></td>
       <td><%= link_to 'Show', barber_path(barber) %></td>
       <td><%= link_to 'Edit', edit_barber_path(barber) %></td>
+      <td><%= link_to 'Destroy', barber_path(barber),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

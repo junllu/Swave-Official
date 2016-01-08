@@ -35,6 +35,13 @@ class BarbersController < ApplicationController
     end
   end
 
+  def destroy
+    @barber = Barber.find(params[:id])
+    @barber.destroy
+
+    redirect_to barbers_path
+  end
+
   private
     def barber_params
       params.require(:barber).permit(:username, :name, :personal_bio);
