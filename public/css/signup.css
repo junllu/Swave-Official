@@ -7,9 +7,8 @@
  */
 
 nav {
- 	background: #DCDCDC;
+ 	background: transparent;
  }
-
  .material-icons{
 	position:absolute;
 	top: 5px;
@@ -21,17 +20,25 @@ body {
 background: #000000; /* Old browsers */
 background: -moz-linear-gradient(45deg, #191919 0%, #000000 78%); /* FF3.6-15 */
 background: -webkit-linear-gradient(45deg, #191919 0%, #D3D3D3 78%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, #191919 0%, #000000 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#191919',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background: linear-gradient(45deg, #000000 0%, #ffe700 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#191919',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 font-family: Righteous;
 color:white;
 }
 
 
 
-.intro-text{
-	 -vendor-animation-duration: 3s;
-  -vendor-animation-delay: 2s;
+.container{
+	position: absolute center;
+	margin-left: auto;
+	margin-right: auto;
+	width:70%;
+}
+.form-color{
+	color:black;
+}
+.submit{
+	color: gray;
 }
 
 .icon-block {
