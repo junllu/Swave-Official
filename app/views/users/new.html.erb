@@ -1,27 +1,91 @@
-<h1>Sign up</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>SWAVE - Your Personal Barber Anywhere</title>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages' %>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+   <!-- OnePage Scroll CSS -->
+    <link href="css/onepage-scroll.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="animate.css">
+</head>
 
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
+<body>
+  <nav role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo left">Swave</a>
+      <ul class="right hide-on-med-and-down">
 
-  <p>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </p>
+        <li><a href="styles.html">Styles</a></li>
+        <li><a href="barbers.html">Barbers</a></li>
+        <li><a href="book.html">Book Now</a></li>
+        <li><a href="signup">Sign Up</a></li>
+      </ul>
 
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </p>
+      <ul id="nav-mobile" class="side-nav">
 
-  <p>
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation %>
-  </p>
+        <li><a href="styles.html">Styles</a></li>
+        <li><a href="barbers.html">Barbers</a></li>
+        <li><a href="book.html">Book Now</a></li>
+        <li><a href='signup'>Sign Up</a></li>
 
-  <%= f.submit "Create my account" %>
-<% end %>
+      </ul>    
+       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class = "container">
+
+      <h2>Sign up</h2>
+
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <p>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </p>
+
+        <p>
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </p>
+
+        <p>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </p>
+
+        <p>
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %>
+        </p>
+
+        <%= f.submit "Create my account" %>
+      <% end %>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+     <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- One Page Scroll JavaScript -->
+    <script src="js/jquery.onepage-scroll.min.js"></script>
+
+      <script>
+            $('.main').onepage_scroll({
+            sectionContainer: "section",
+            easing: "ease",
+            animationTime: 200,
+            responsiveFallback: false,
+            loop: false
+            });
+        </script>
+</body>
+</html>
+

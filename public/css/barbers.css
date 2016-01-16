@@ -10,12 +10,11 @@ nav {
  	background: transparent;
  }
 
-.material-icons{
+ .material-icons{
 	position:absolute;
 	top: 5px;
     left: 550px;
 }
-
 
 body {
 background: #000000; /* Old browsers */
@@ -27,36 +26,11 @@ font-family: Righteous;
 color:white;
 }
 
+
+
 .intro-text{
-	position: center;
-	text-align: center;
-	color:	FFF5EE;
-}
-
-.intro{
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#id{
-	padding-bottom: 200px;
-	position: center ;
-}
-
-.about{
-	position: center;
-	text-align: center;
-	width: 70%;
-	padding-left: 100px;
-	margin-right: auto;
-	margin-left: auto;
+	 -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
 }
 
 .icon-block {
