@@ -1,0 +1,62 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav {
+ 	background: transparent;
+ }
+
+
+body {
+background: #000000; /* Old browsers */
+background: -moz-linear-gradient(45deg, #191919 0%, #000000 78%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #191919 0%, #D3D3D3 78%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #191919 0%, #000000 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#191919',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+font-family: Righteous;
+color:white;
+}
+.title{
+	color:black;
+}
+
+.intro{
+    width: 100%;
+    padding: 50px 0;
+    background: url('intro-bg.jpg') no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro-text{
+	position: center;
+	text-align: center;
+}
+
+#id{
+	padding-bottom: 200px;
+	position: center ;
+}
+
+.about{
+	position: center;
+	text-align: center;
+	width: 70%;
+	padding-left: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}

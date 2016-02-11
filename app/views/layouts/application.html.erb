@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SwaveApp</title>
+  <title>SWAVE - Your Personal Barber Anywhere</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+  <!-- OnePage Scroll CSS -->
+  <link href="css/onepage-scroll.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="animate.css">
 </head>
 <body>
-<% flash.each do |message_type, message| %>
-  <div class="alert-alert-<%= message_type %>"><%= message %></div>
-<% end %>
-<%= yield %>
+  <%= render 'layouts/navigation' %>
+  <% flash.each do |message_type, message| %>
+    <div class="alert-alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 
+  <%= yield %>
 </body>
 </html>
