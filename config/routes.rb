@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get 'about' => 'home#about'
   get 'styles' => 'home#styles'
   resources :appointments
+  resources :mailinglist
+  match "/create_mailinglist" => "home#create_mailinglist", :via => :post, :as => :create_mailinglist
+
 end

@@ -15,5 +15,12 @@ class SetupDb < ActiveRecord::Migration
     add_column :barbers, :last_name, :string
     add_column :users, :phone_number, :string
     add_column :barbers, :phone_number, :string
+
+    create_table :mailinglists do |t|
+      t.timestamps null: false
+      t.string :email, null: false
+      t.string :first_name
+      t.string :last_name
+    end
   end
 end

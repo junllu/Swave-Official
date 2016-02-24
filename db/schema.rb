@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(version: 20160210195929) do
   add_index "barbers", ["email"], name: "index_barbers_on_email", unique: true
   add_index "barbers", ["reset_password_token"], name: "index_barbers_on_reset_password_token", unique: true
 
+  create_table "mailinglists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "email",      null: false
+    t.string   "first_name"
+    t.string   "last_name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

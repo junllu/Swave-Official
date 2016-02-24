@@ -1,0 +1,12 @@
+<%= form_tag '/create_mailinglist', method: "post" do %>
+  <%= label_tag 'email' %>
+  <%= text_field_tag 'email' %><br/>
+
+  <%= label_tag 'first_name' %>
+  <%= text_field_tag 'first_name' %><br/>
+
+  <%= label_tag 'last_name' %>
+  <%= text_field_tag 'last_name' %><br/>
+  
+  <%= submit_tag 'Add me to the mailing list' %>
+<% end %>
